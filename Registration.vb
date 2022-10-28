@@ -4,8 +4,7 @@ Imports FireSharp.Interfaces
 Public Class Registration
     Private fcon As New FirebaseConfig With
         {
-        .AuthSecret = "m5KIfvB60pJPjJx8Ti15R08LqREXCaZhlRcfddL8",
-        .BasePath = "https://dairyfarming-e999c-default-rtdb.firebaseio.com/"
+       
     }
     Private client As IFirebaseClient
     Private Sub Registration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
