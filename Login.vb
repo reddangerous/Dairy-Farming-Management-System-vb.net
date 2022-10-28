@@ -6,8 +6,7 @@ Public Class Login
 
     Private fcon As New FirebaseConfig With
         {
-        .AuthSecret = "m5KIfvB60pJPjJx8Ti15R08LqREXCaZhlRcfddL8",
-        .BasePath = "https://dairyfarming-e999c-default-rtdb.firebaseio.com/"
+      
     }
     Private client As IFirebaseClient
 
