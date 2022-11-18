@@ -57,10 +57,9 @@ Public Class Login
             Me.Close()
             MessageBox.Show("Login Successful")
         ElseIf (MyUser.IsEqual(resUser, CurUser) AndAlso UserComboBox.SelectedItem Is ("Company")) Then
-            Dim real As New Company
             Company.Fname = resUser.FullNames
             Me.Hide()
-            real.ShowDialog()
+            Company.ShowDialog()
             Me.Close()
             MessageBox.Show("Login Successful")
 

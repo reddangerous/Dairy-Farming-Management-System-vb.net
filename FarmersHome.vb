@@ -55,13 +55,14 @@ Public Class FarmersHome
         End With
 
         Dim set2 = client.Set("Counter", Counter)
-        Dim set3 = client.Set("AnimalSn/" + Convert.ToString(Counter), roll)
+        Dim set3 = client.Set("FarmerId/" + Convert.ToString(Counter), roll)
 
         MessageBox.Show("Details Added Succesfully")
         AnimalSNTextBox.Text = ""
         ConsumptionTextBox.Text = ""
         ProductionTextBox.Text = ""
         DateTimePicker.Text = ""
+        FarmerIdTextBox.Text = ""
 
     End Sub
 
@@ -100,37 +101,34 @@ Public Class FarmersHome
         dt.Columns.Add("Date")
         dt.Columns.Add("TotalProduction")
 
-        AnimalDataGridView.Rows.Clear()
-
+        dt.Rows.Clear()
 
 
         Dim res = client.Get("Counter")
         Dim Counter = Integer.Parse(res.ResultAs(Of String))
 
         For i = 1 To Counter
-            Dim res2 = client.Get("AnimalSn/" + Convert.ToString(i) + "/AnimalSn")
-            Dim AnimalSn = res2.ResultAs(Of String)
+            Dim res2 = client.Get("FarmerId/" + Convert.ToString(i) + "/AnimalSn")
+            Dim AnimalSerial = res2.ResultAs(Of String)
 
-            Dim res3 = client.Get("Details/" + AnimalSn)
+            Dim res3 = client.Get("Details/" + AnimalSerial)
             Dim DbRes = res3.ResultAs(Of DbDetails)
 
             If (DbRes.AnimalSn <> "") Then
                 dt.Rows.Add(DbRes.AnimalSn, DbRes.FarmerId, DbRes.Consumption, DbRes.Production, DbRes.DatePicker, DbRes.TotalProduction)
             End If
         Next
-        For Each item As DataRow In dt.Rows
-                AnimalDataGridView.Rows.Add(item.ItemArray)
 
-            Next
-
-            For Each item As DataRow In dt.Rows
-            Dim totalProduction As Double = 0
-            For Each row As DataGridViewRow In AnimalDataGridView.Rows
-                totalProduction += row.Cells("Production").Value
-            Next
-            item("TotalProduction") = totalProduction
-        Next
         AnimalDataGridView.DataSource = dt
+        For i As Integer = 0 To dt.Rows.Count - 1
+            For j As Integer = 0 To dt.Columns.Count - 1
+                If i = 0 Then
+                    AnimalDataGridView.Rows(i).Cells("TotalProduction").Value = Val(AnimalDataGridView.Rows(i).Cells("Production").Value)
+                Else
+                    AnimalDataGridView.Rows(i).Cells("TotalProduction").Value = Val(AnimalDataGridView.Rows(i - 1).Cells("TotalProduction").Value) + Val(AnimalDataGridView.Rows(i).Cells("Production").Value)
+                End If
+            Next
+        Next
 
 
 
@@ -138,20 +136,11 @@ Public Class FarmersHome
 
     End Sub
 
-    Private Sub RemoveButton_Click(sender As Object, e As EventArgs) Handles RemoveButton.Click
-        Dim NewUser As New DbDetails() With
-          {
-          .AnimalSn = AnimalSNTextBox.Text,
-          .Consumption = ConsumptionTextBox.Text,
-          .Production = ProductionTextBox.Text,
-          .DatePicker = DateTimePicker.Text
-          }
-
-        Dim updater = client.Delete("Details/" + AnimalViewRemove.Text)
-        MessageBox.Show("Details deleted  Succesfully")
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
     End Sub
 
-    Public Sub AnimalDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AnimalDataGridView.CellContentClick
+    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
 
     End Sub
 End Class

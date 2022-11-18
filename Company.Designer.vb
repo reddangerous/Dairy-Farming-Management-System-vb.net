@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Company
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,27 +20,25 @@ Partial Class Company
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Company))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SetPriceButton = New System.Windows.Forms.Button()
         Me.SetPriceTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ViewButton = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PaymentButton = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.GenerateButton = New System.Windows.Forms.Button()
         Me.PrintButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.FarmerIdTextBox = New System.Windows.Forms.TextBox()
-        Me.FarmerId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AnimalSn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Production = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.farmersDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Payment = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +48,7 @@ Partial Class Company
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(58, 9)
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(91, 24)
         Me.Label1.TabIndex = 1
@@ -78,7 +76,7 @@ Partial Class Company
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.BackColor = System.Drawing.Color.Chartreuse
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(12, 47)
@@ -90,7 +88,7 @@ Partial Class Company
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.BackColor = System.Drawing.Color.Chartreuse
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(12, 157)
@@ -102,7 +100,7 @@ Partial Class Company
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.White
+        Me.Label4.BackColor = System.Drawing.Color.Chartreuse
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(12, 221)
@@ -111,72 +109,61 @@ Partial Class Company
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Farmer Id"
         '
-        'ViewButton
-        '
-        Me.ViewButton.AutoSize = True
-        Me.ViewButton.BackColor = System.Drawing.Color.Cyan
-        Me.ViewButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ViewButton.Location = New System.Drawing.Point(48, 272)
-        Me.ViewButton.Name = "ViewButton"
-        Me.ViewButton.Size = New System.Drawing.Size(87, 30)
-        Me.ViewButton.TabIndex = 8
-        Me.ViewButton.Text = "View"
-        Me.ViewButton.UseVisualStyleBackColor = False
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FarmerId, Me.AnimalSn, Me.Production, Me.farmersDate, Me.Payment})
-        Me.DataGridView1.Location = New System.Drawing.Point(371, 47)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(423, 111)
-        Me.DataGridView1.TabIndex = 9
-        '
         'PaymentButton
         '
         Me.PaymentButton.AutoSize = True
         Me.PaymentButton.BackColor = System.Drawing.Color.Cyan
         Me.PaymentButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PaymentButton.Location = New System.Drawing.Point(177, 272)
+        Me.PaymentButton.Location = New System.Drawing.Point(109, 283)
         Me.PaymentButton.Name = "PaymentButton"
-        Me.PaymentButton.Size = New System.Drawing.Size(88, 30)
-        Me.PaymentButton.TabIndex = 10
-        Me.PaymentButton.Text = "Payment"
+        Me.PaymentButton.Size = New System.Drawing.Size(131, 30)
+        Me.PaymentButton.TabIndex = 8
+        Me.PaymentButton.Text = "View Payment"
         Me.PaymentButton.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.Location = New System.Drawing.Point(325, 12)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(652, 233)
+        Me.DataGridView1.TabIndex = 9
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.White
+        Me.Label5.BackColor = System.Drawing.Color.Chartreuse
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(415, 187)
+        Me.Label5.Location = New System.Drawing.Point(485, 257)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(293, 24)
+        Me.Label5.Size = New System.Drawing.Size(173, 24)
         Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Generate and Print Milk Statement" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        '
-        'GenerateButton
-        '
-        Me.GenerateButton.AutoSize = True
-        Me.GenerateButton.BackColor = System.Drawing.Color.Cyan
-        Me.GenerateButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GenerateButton.Location = New System.Drawing.Point(430, 239)
-        Me.GenerateButton.Name = "GenerateButton"
-        Me.GenerateButton.Size = New System.Drawing.Size(114, 30)
-        Me.GenerateButton.TabIndex = 12
-        Me.GenerateButton.Text = "Generate"
-        Me.GenerateButton.UseVisualStyleBackColor = False
+        Me.Label5.Text = "Print Milk Statement" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'PrintButton
         '
         Me.PrintButton.AutoSize = True
         Me.PrintButton.BackColor = System.Drawing.Color.Cyan
         Me.PrintButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PrintButton.Location = New System.Drawing.Point(585, 239)
+        Me.PrintButton.Location = New System.Drawing.Point(516, 306)
         Me.PrintButton.Name = "PrintButton"
         Me.PrintButton.Size = New System.Drawing.Size(114, 30)
         Me.PrintButton.TabIndex = 13
@@ -202,50 +189,31 @@ Partial Class Company
         Me.FarmerIdTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FarmerIdTextBox.TabIndex = 15
         '
-        'FarmerId
+        'PrintDocument1
         '
-        Me.FarmerId.HeaderText = "Farmer Id"
-        Me.FarmerId.Name = "FarmerId"
-        Me.FarmerId.ReadOnly = True
         '
-        'AnimalSn
+        'PrintPreviewDialog1
         '
-        Me.AnimalSn.HeaderText = "AnimalSn"
-        Me.AnimalSn.Name = "AnimalSn"
-        Me.AnimalSn.ReadOnly = True
-        '
-        'Production
-        '
-        Me.Production.HeaderText = "Production"
-        Me.Production.Name = "Production"
-        Me.Production.ReadOnly = True
-        '
-        'farmersDate
-        '
-        Me.farmersDate.HeaderText = "Date"
-        Me.farmersDate.Name = "farmersDate"
-        Me.farmersDate.ReadOnly = True
-        '
-        'Payment
-        '
-        Me.Payment.HeaderText = "Payment"
-        Me.Payment.Name = "Payment"
-        Me.Payment.ReadOnly = True
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
         '
         'Company
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.projectFinal.My.Resources.Resources.company
-        Me.ClientSize = New System.Drawing.Size(807, 384)
+        Me.ClientSize = New System.Drawing.Size(981, 384)
         Me.Controls.Add(Me.FarmerIdTextBox)
         Me.Controls.Add(Me.ExitButton)
         Me.Controls.Add(Me.PrintButton)
-        Me.Controls.Add(Me.GenerateButton)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.PaymentButton)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.ViewButton)
+        Me.Controls.Add(Me.PaymentButton)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -266,17 +234,12 @@ Partial Class Company
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents ViewButton As Button
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents PaymentButton As Button
+    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label5 As Label
-    Friend WithEvents GenerateButton As Button
     Friend WithEvents PrintButton As Button
     Friend WithEvents ExitButton As Button
     Friend WithEvents FarmerIdTextBox As TextBox
-    Friend WithEvents FarmerId As DataGridViewTextBoxColumn
-    Friend WithEvents AnimalSn As DataGridViewTextBoxColumn
-    Friend WithEvents Production As DataGridViewTextBoxColumn
-    Friend WithEvents farmersDate As DataGridViewTextBoxColumn
-    Friend WithEvents Payment As DataGridViewTextBoxColumn
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
 End Class

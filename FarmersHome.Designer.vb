@@ -37,17 +37,10 @@ Partial Class FarmersHome
         Me.Label7 = New System.Windows.Forms.Label()
         Me.AnimalDataGridView = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.AnimalViewRemove = New System.Windows.Forms.TextBox()
         Me.ViewButton = New System.Windows.Forms.Button()
-        Me.RemoveButton = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.FarmerIdTextBox = New System.Windows.Forms.TextBox()
-        Me.Animal_sn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FarmerId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Consumption = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Production = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AnimalDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TotalProduction = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Delete = New System.Windows.Forms.Button()
         CType(Me.AnimalDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -182,17 +175,16 @@ Partial Class FarmersHome
         Me.Label7.ForeColor = System.Drawing.Color.Teal
         Me.Label7.Location = New System.Drawing.Point(418, 21)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(295, 24)
+        Me.Label7.Size = New System.Drawing.Size(313, 24)
         Me.Label7.TabIndex = 12
-        Me.Label7.Text = "View Monthly details and payment" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label7.Text = "View Monthly details and production"
         '
         'AnimalDataGridView
         '
         Me.AnimalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AnimalDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Animal_sn, Me.FarmerId, Me.Consumption, Me.Production, Me.AnimalDate, Me.TotalProduction})
-        Me.AnimalDataGridView.Location = New System.Drawing.Point(381, 184)
+        Me.AnimalDataGridView.Location = New System.Drawing.Point(324, 68)
         Me.AnimalDataGridView.Name = "AnimalDataGridView"
-        Me.AnimalDataGridView.Size = New System.Drawing.Size(524, 192)
+        Me.AnimalDataGridView.Size = New System.Drawing.Size(581, 270)
         Me.AnimalDataGridView.TabIndex = 13
         '
         'Label8
@@ -206,47 +198,17 @@ Partial Class FarmersHome
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "FarmerId" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
-        'AnimalViewRemove
-        '
-        Me.AnimalViewRemove.Location = New System.Drawing.Point(569, 77)
-        Me.AnimalViewRemove.Name = "AnimalViewRemove"
-        Me.AnimalViewRemove.Size = New System.Drawing.Size(100, 20)
-        Me.AnimalViewRemove.TabIndex = 15
-        '
         'ViewButton
         '
         Me.ViewButton.AutoSize = True
         Me.ViewButton.BackColor = System.Drawing.Color.Cyan
         Me.ViewButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ViewButton.Location = New System.Drawing.Point(430, 118)
+        Me.ViewButton.Location = New System.Drawing.Point(593, 346)
         Me.ViewButton.Name = "ViewButton"
         Me.ViewButton.Size = New System.Drawing.Size(79, 30)
         Me.ViewButton.TabIndex = 16
         Me.ViewButton.Text = "View"
         Me.ViewButton.UseVisualStyleBackColor = False
-        '
-        'RemoveButton
-        '
-        Me.RemoveButton.AutoSize = True
-        Me.RemoveButton.BackColor = System.Drawing.Color.Red
-        Me.RemoveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RemoveButton.Location = New System.Drawing.Point(569, 118)
-        Me.RemoveButton.Name = "RemoveButton"
-        Me.RemoveButton.Size = New System.Drawing.Size(143, 30)
-        Me.RemoveButton.TabIndex = 17
-        Me.RemoveButton.Text = "Remove Animal"
-        Me.RemoveButton.UseVisualStyleBackColor = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.White
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(418, 77)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(99, 24)
-        Me.Label9.TabIndex = 18
-        Me.Label9.Text = "Animal SN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'FarmerIdTextBox
         '
@@ -256,47 +218,40 @@ Partial Class FarmersHome
         Me.FarmerIdTextBox.Size = New System.Drawing.Size(100, 22)
         Me.FarmerIdTextBox.TabIndex = 19
         '
-        'Animal_sn
+        'Button1
         '
-        Me.Animal_sn.HeaderText = "Animal SN"
-        Me.Animal_sn.Name = "Animal_sn"
+        Me.Button1.AutoSize = True
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(373, 393)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 30)
+        Me.Button1.TabIndex = 20
+        Me.Button1.Text = "Exit"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'FarmerId
+        'Delete
         '
-        Me.FarmerId.HeaderText = "FarmerId"
-        Me.FarmerId.Name = "FarmerId"
-        '
-        'Consumption
-        '
-        Me.Consumption.HeaderText = "Consumption"
-        Me.Consumption.Name = "Consumption"
-        '
-        'Production
-        '
-        Me.Production.HeaderText = "Production"
-        Me.Production.Name = "Production"
-        '
-        'AnimalDate
-        '
-        Me.AnimalDate.HeaderText = "Date"
-        Me.AnimalDate.Name = "AnimalDate"
-        '
-        'TotalProduction
-        '
-        Me.TotalProduction.HeaderText = "TotalProduction"
-        Me.TotalProduction.Name = "TotalProduction"
+        Me.Delete.AutoSize = True
+        Me.Delete.BackColor = System.Drawing.Color.DarkRed
+        Me.Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Delete.Location = New System.Drawing.Point(113, 393)
+        Me.Delete.Name = "Delete"
+        Me.Delete.Size = New System.Drawing.Size(79, 30)
+        Me.Delete.TabIndex = 21
+        Me.Delete.Text = "Delete"
+        Me.Delete.UseVisualStyleBackColor = False
         '
         'FarmersHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.projectFinal.My.Resources.Resources.farmers
-        Me.ClientSize = New System.Drawing.Size(917, 388)
+        Me.ClientSize = New System.Drawing.Size(917, 430)
+        Me.Controls.Add(Me.Delete)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.FarmerIdTextBox)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.RemoveButton)
         Me.Controls.Add(Me.ViewButton)
-        Me.Controls.Add(Me.AnimalViewRemove)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.AnimalDataGridView)
         Me.Controls.Add(Me.Label7)
@@ -335,15 +290,8 @@ Partial Class FarmersHome
     Friend WithEvents Label7 As Label
     Friend WithEvents AnimalDataGridView As DataGridView
     Friend WithEvents Label8 As Label
-    Friend WithEvents AnimalViewRemove As TextBox
     Friend WithEvents ViewButton As Button
-    Friend WithEvents RemoveButton As Button
-    Friend WithEvents Label9 As Label
     Friend WithEvents FarmerIdTextBox As TextBox
-    Friend WithEvents Animal_sn As DataGridViewTextBoxColumn
-    Friend WithEvents FarmerId As DataGridViewTextBoxColumn
-    Friend WithEvents Consumption As DataGridViewTextBoxColumn
-    Friend WithEvents Production As DataGridViewTextBoxColumn
-    Friend WithEvents AnimalDate As DataGridViewTextBoxColumn
-    Friend WithEvents TotalProduction As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Delete As Button
 End Class

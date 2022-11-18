@@ -1,8 +1,8 @@
 ﻿Public Class MyUser
     Public Property UserId() As String = ""
-    Public Property Password() As String
-    Public Property FullNames() As String
-    Public Property UserRole() As String
+    Public Property Password() As String = ""
+    Public Property FullNames() As String = ""
+    Public Property UserRole() As String = ""
 
     Private Shared TheError As String = "UserId not found "
 

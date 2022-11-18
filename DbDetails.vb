@@ -1,10 +1,13 @@
 ﻿Public Class DbDetails
     Public Property AnimalSn() As String = ""
     Public Property Production() As String = ""
+    Public Property TotalProduction() As String = ""
     Public Property Consumption() As String = ""
     Public Property DatePicker() As String = ""
-    Public Property TotalProduction() As String = ""
     Public Property FarmerId() As String = ""
+    Public Property Payment() As String = ""
+    Public Property Price() As String = ""
+    Public Property TotalPayment() As String = ""
 
 
 

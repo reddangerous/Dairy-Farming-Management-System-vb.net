@@ -36,16 +36,16 @@ Public Class Registration
             .UserRole = UserComboBox.Text,
             .FullNames = NameTextBox.Text
             }
-        Dim res = client.Get("Counter2")
+        ''  Dim res = client.Get("Counter2")
 
-        Dim Counter2 = Integer.Parse(res.ResultAs(Of String))
-        Dim roll As New MyUser()
-        With roll
-            .UserId = UserIdTextBox.Text
-        End With
+        '' Dim Counter2 = Integer.Parse(res.ResultAs(Of String))
+        ''Dim roll As New MyUser()
+        ''  With roll
+        '' .UserId = UserIdTextBox.Text
+        ''End With
 
-        Dim set3 = client.Set("UserId/" + Convert.ToString(Counter2), roll)
-        Dim set2 = client.Set("Counter2", Counter2)
+        '' Dim set3 = client.Set("UserId/" + Convert.ToString(Counter2), roll)
+        '' Dim set2 = client.Set("Counter2", Counter2)
         Dim setter = client.Set("Users/" + UserComboBox.Text, NewUser)
         MessageBox.Show("Registration Successful")
         UserComboBox.Text = ""
